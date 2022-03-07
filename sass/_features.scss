@@ -1,4 +1,36 @@
 .features {
-    background-color: $color-grey-light-2;
     grid-column: center-start / center-end;
+
+    margin: 15rem 0;
+
+    display: grid;
+    // grid-template-columns: subgrid; //subgrid uses the parent container columns 
+    // grid-template-rows: subgrid;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); //this makes the grid responsive without any media query
+    // grid-template-rows: auto auto; //if we dont define this also, this only is gonna happen anyways
+    grid-gap: 6rem;
+
+    align-items: start;
+
+}
+
+.feature {
+
+    display: grid;
+    grid-template-columns: min-content 1fr; //we dont define the rows here because we simply want them to be the size of the content which will happen automatically
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+
+    &__icon {
+        fill: $color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+        grid-row: 1 / span 2; //-1 means the end of the explicit grid, so when we have implicit grids we cant use -1 to span the element till the very end
+        transform: translateY(-1rem);
+    }
+
+    &__text {
+        font-size: 1.7rem;
+    }
 }
