@@ -8,7 +8,7 @@
     // grid-template-rows: subgrid;
     // grid-template-columns: repeat(3, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); //this makes the grid responsive without any media query
-    // grid-template-rows: auto auto; //if we dont define this also, this only is gonna happen anyways
+    // grid-template-rows: auto auto; //if we dont define this also, this only is gonna happen anyways, but rahter than having an explicit grid we will end up with and implicit grid whose height is dependent on the min-content of the row, or we can say the height is dependent on the content of the row
     grid-gap: 6rem;
 
     align-items: start;
