@@ -7,5 +7,21 @@
     &__content {
         background-color: $color-grey-light-1;
         grid-column: col-start 5 / full-end;
+
+        padding: 6rem 8vw; //we used the 'vw' unit here to make it responsive. "vw" unit is a great tool to make truly responsive layouts
+
+        // display: flex;        
+        // flex-direction: column; //since its a one dimensional layout we used flex instead of grid
+        // justify-content: center;
+        // align-items: flex-start;  we can use either flexbox or grid here but since its a one dimensional layout we should use flexbox
+
+        display: grid;
+        align-content: center;
+        justify-items: start;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        font-style: italic;
     }
 }
