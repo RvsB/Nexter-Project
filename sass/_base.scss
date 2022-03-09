@@ -17,6 +17,8 @@ $font-display: 'Josefin Sans', sans-serif;
 //RESPONSIVE BREAKPOINTS
 $bp-largest: 75em; //1200px
 $bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px
 
 
 
@@ -56,8 +58,12 @@ body {
     // }
 
     @media only screen and (max-width: $bp-largest) {
-        grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content); //we can also use auto in place of min content, auto will also make sure to fit all the content
+        grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content); 
         grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content repeat(3, min-content); //we can also just write (grid-template-rows: 6rem calc(100vh - 6rem)) and the rest of the rows will be implicit and their height size will be based on their content 
     }
     
 }
