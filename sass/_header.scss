@@ -24,7 +24,7 @@
         justify-self: start;
     }
 
-    &__seenon-text {
+    &__seenon-text {// only text alone can also be an grid item and the pseudo elements also are treated as grid items
         font-size: 1.6rem;
         color: $color-grey-light-2;
 

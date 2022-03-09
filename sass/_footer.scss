@@ -12,9 +12,6 @@
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     grid-gap: 2rem; //we couls have used flexbox for this element but with flexbx we dont have the option of adding gaps between the elements and with grid we can easily do that without specifying the margin for the last element. also grid doesnt add any margin at the end of the container like flex box would do if we use margin right on an element
     align-items: center;
-    
-    &__item {
-    }
 
     &__link:link,
     &__link:visited {
