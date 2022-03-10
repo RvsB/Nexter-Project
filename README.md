@@ -2,7 +2,7 @@
 
 A responsive webpage based on CSS grid layout.
 
-### **[Go to the Natours webpage](https://nex-ter.netlify.app)**
+### **[Go to the Nexter webpage](https://nex-ter.netlify.app)**
 
 A Website entirely based on CSS Grid layout   
 
