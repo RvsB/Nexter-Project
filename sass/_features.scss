@@ -10,12 +10,27 @@
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); //this makes the grid responsive without any media query
     // grid-template-rows: auto auto; //if we dont define this also, this only is gonna happen anyways, but rahter than having an explicit grid we will end up with and implicit grid whose height is dependent on the min-content of the row, or we can say the height is dependent on the content of the row
     grid-gap: 6rem;
-
     align-items: start;
+
+    // @supports(display: grid) {  code for progressive enhancement, and to check if the browser supports grid or not
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    // grid-gap: 6rem;
+    // align-items: start;
+    // }
 
 }
 
 .feature {
+
+    // float: left;  if the browser doesnt use css grid then this code will position the elements 
+    // width: 33.3333%;
+    // margin-bottom: 6rem;
+
+    // @supports(display: grid) {
+    //     width: auto;//things like floats, display(inline-block and table-cell) and vertical align get ignored if they are specified on an item if the container is defined as grid or flexbox
+    //     margin-bottom: 0;
+    // }
 
     display: grid;
     grid-template-columns: min-content 1fr; //we dont define the rows here because we simply want them to be the size of the content which will happen automatically
